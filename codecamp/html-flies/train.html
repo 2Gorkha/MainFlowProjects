@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IRCTC VENDOR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('https://okcredit-blog-images-prod.storage.googleapis.com/2020/12/indianrailway1.jpg')
+      no-repeat center center/cover;
+      width: 100vw;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: orangered;
+      text-decoration: underline;
+      font-weight: bold;
+      padding: 10px;
+      display: block;
+    }
+
+    /* Dropdown menu */
+    nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      min-width: 180px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 0;
+      z-index: 100;
+    }
+
+    nav ul li:hover > .dropdown {
+      display: block;
+    }
+
+    nav ul li .dropdown li {
+      display: block;
+      width: 100%;
+    }
+
+    nav ul li .dropdown li a {
+      padding: 8px 15px;
+      color: lightskyblue;
+      text-decoration: none;
+      display: block;
+    }
+
+    nav ul li .dropdown li a:hover {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Nested Dropdown */
+    .nested-dropdown {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      background-color: white;
+      border: 1px solid #ddd;
+      min-width: 180px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown li:hover > .nested-dropdown {
+      display: block;
+    }
+
+    nav .logo {
+      color: darkblue;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?train,railway') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color:red;
+      background: white;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: orangered;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: darkred;
+    }
+    footer {
+      background: white;
+      color: blue;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      width: 100%;
+    }
+
+    .footer-links a {
+      color: orangered;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .register-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #ddd;
+      min-width: 150px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 0;
+    }
+
+    .register-container:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown li {
+      list-style: none;
+      padding: 8px;
+    }
+
+    .dropdown a {
+      text-decoration: none;
+      color: orangered;
+      display: block;
+      padding: 8px;
+    }
+
+    .dropdown a:hover {
+      background: #007bff;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <li>
+      <a href="#">Home</a>
+      <ul class="dropdown">
+        <li><a href="#">Services</a>
+          <ul class="nested-dropdown">
+            <li><a href="Catering.html">Contract</a></li>
+            <li><a href="#">Bed Roll</a></li>
+            <li><a href="https://irctc.co.in/nget/train-search" target="_blank">E-Ticketing</a></li>
+            <li><a href="#">Luggage</a></li>
+          </ul>
+        </li>
+      </ul
+    </li>
+
+    <li>
+      <a href="#">Transactions</a>
+      <ul class="dropdown">
+        <li><a href="payment.html">Payments</a></li>
+        <li><a href="Bill.html">Bill History</a></li>
+        <li><a href="#">Wallet and Balance</a></li>
+        <li><a href="#">Queued Payments</a></li>
+        <li><a href="#">Cancelled Transaction</a></li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">Menu on Board</a>
+
+      <ul class="dropdown">
+        <li><a href="#">Breakfast</a>
+          <ul class="nested-dropdown">
+            <li><a href="Poha.html">Poha</a></li>
+            <li><a href="BreadCutlet.html">Bread Cutlet</a></li>
+            <li><a href="Maggi.html">Maggi</a></li>
+            <li><a href="Idlli.html">Idli</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Lunch</a>
+          <ul class="nested-dropdown">
+            <li><a href="#">Veg Thali</a></li>
+            <li><a href="#">Veg Biryani</a></li>
+            <li><a href="#">Chicken Rice</a></li>
+            <li><a href="#">Egg Rice</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Dinner</a>
+          <ul class="nested-dropdown">
+            <li><a href="#">Veg Meals</a></li>
+            <li><a href="#">Non-Veg Meals</a></li>
+            <li><a href="#">Jain Meals</a></li>
+            <li><a href="#">Kids' Meals</a></li>
+            <li><a href="#">Beverages</a></li>
+            <li><a href="#">Desserts</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">Vendors On Board</a>
+      <ul class="dropdown">
+        <li>
+          <a href="#">Food Vendors (V001)</a>
+          <ul class="nested-dropdown">
+            <li><a href="Ramesh.html">Ramesh</a></li>
+            <li><a href="Mukesh.html">Mukesh</a></li>
+            <li><a href="#">Sujal Das</a></li>
+            <li><a href="#">Raju</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Local Delicacies (V002)</a></li>
+        <li><a href="#">Snack & Beverage Vendors (V003)</a></li>
+        <li><a href="#">Handicrafts & Souvenirs (V004)</a></li>
+        <li><a href="#">Medical & Essentials (V005)</a></li>
+        <li><a href="#">Newspapers & Magazines (V006)</a></li>
+        <button class = "Button" ></button>
+      </ul>
+    </li>
+
+    <li><a href="#">More</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <h1 id="animated-heading"></h1> <!-- Empty heading (JS will insert text) -->
+
+  <script>
+    const text = "Welcome to IRCTC TradePoint Portal"; // Heading text
+    const heading = document.getElementById("animated-heading");
+
+    text.split("").forEach((char, index) => {  // Loop through each letter
+      let span = document.createElement("span");  // Create a span for each letter
+      span.textContent = char;  // Set text inside span
+      span.style.opacity = "0";  // Hide initially
+      span.style.animation = `fadeIn 0.5s linear ${index * 0.1}s forwards`; // Apply animation
+      heading.appendChild(span);  // Add span to heading
+    });
+
+    // CSS Animation
+    const style = document.createElement("style");
+    style.innerHTML = `
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  `;
+    document.head.appendChild(style);
+  </script>
+
+  <br>
+  <div class="register-container">
+    <a href="#" class="btn register-btn">Register</a>
+    <ul class="dropdown">
+      <li><a href="hero.html">Passenger</a></li>
+      <li><a href="Register.html">Vendor</a></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+    <footer>
+    <p>&copy; 2025 IRCTC Vendor System. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Contact Us</a> |
+      <a href="#">FAQ</a>
+    </div>
+    </footer>
+  </section>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments - IRCTC Vendor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: darkblue;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background-color: orangered;
+      color: white;
+    }
+    .status {
+      font-weight: bold;
+    }
+    .paid {
+      color: green;
+    }
+    .pending {
+      color: orange;
+    }
+    .failed {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Payment History</h2>
+  <table>
+    <tr>
+      <th>Payment ID</th>
+      <th>Amount (₹)</th>
+      <th>Date</th>
+      <th>Payment Method</th>
+      <th>Status</th>
+    </tr>
+    <tr>
+      <td>#12345</td>
+      <td>250</td>
+      <td>2025-02-27</td>
+      <td>Credit Card</td>
+      <td class="status paid">Paid</td>
+    </tr>
+    <tr>
+      <td>#12346</td>
+      <td>150</td>
+      <td>2025-02-25</td>
+      <td>UPI</td>
+      <td class="status pending">Queued</td>
+    </tr>
+    <tr>
+      <td>#12347</td>
+      <td>300</td>
+      <td>2025-02-20</td>
+      <td>Debit Card</td>
+      <td class="status failed">Failed</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

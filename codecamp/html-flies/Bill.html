@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill History</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<h2>Bill History</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Date of Purchase</th>
+    <th>Vendor Name</th>
+    <th>Train Name/Number</th>
+  </tr>
+  </thead>
+  <tbody id="bill-history-body">
+  <!-- Data will be inserted here dynamically -->
+  </tbody>
+</table>
+
+<script>
+  // Sample bill history data
+  const billHistory = [
+    { date: "2025-02-20", vendor: "Raju", train: "Rajdhani Express (12345)" },
+    { date: "2024-06-18", vendor: "Mukesh", train: "Shatabdi Express (12002)" },
+    { date: "2024-05-15", vendor: "Inderjeet", train: "Duronto Express (12220)" }
+  ];
+
+  const tableBody = document.getElementById("bill-history-body");
+
+  billHistory.forEach(bill => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+                <td>${bill.date}</td>
+                <td>${bill.vendor}</td>
+                <td>${bill.train}</td>
+            `;
+    tableBody.appendChild(row);
+  });
+</script>
+</body>
+</html>
